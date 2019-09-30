@@ -1,0 +1,9 @@
+<section class="phx-hero">
+  <h1><%= plural_of(@produce, @count) %></h1>
+</section>
+
+Quantity | item<br/>
+---------------<br/>
+<%= for {item, count} <- shopping_items() do %>
+   <%= String.pad_leading(item, 8)%> | <%= count %><br/>
+ <% end %>
